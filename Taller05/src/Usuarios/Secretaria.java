@@ -14,10 +14,5 @@ public class Secretaria extends Persona{
 		
 	}
 	
-	public void ayudaDoctor(Doctor d) {
-		this.doctor=d;
-		d.registraSecretaria(this);
-	}
-	
 	
 }
