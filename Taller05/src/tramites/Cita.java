@@ -3,6 +3,7 @@ package tramites;
 import java.time.LocalDateTime;
 
 import Usuarios.Doctor;
+import Usuarios.Paciente;
 
 public class Cita implements Pago {
 	
@@ -10,6 +11,7 @@ public class Cita implements Pago {
 	protected boolean pagada;
 	protected String registradoPor;
 	protected Doctor doctor;
+	protected Paciente paciente;
 	
 	public Cita() {
 		this.pagada=false;
@@ -19,10 +21,6 @@ public class Cita implements Pago {
 	public boolean realizarPago(float monto) {
 		this.pagada=true;
 		return true;
-	}
-	
-	public void atendidaPor(Doctor d) {
-		this.doctor=d;
 	}
 	
 }
