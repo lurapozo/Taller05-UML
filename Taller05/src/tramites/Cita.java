@@ -1,11 +1,28 @@
 package tramites;
 
 import java.time.LocalDateTime;
-public class Cita {
+
+import Usuarios.Doctor;
+
+public class Cita implements Pago {
+	
 	protected LocalDateTime fecha;
 	protected boolean pagada;
 	protected String registradoPor;
-	public void realizarPago(Pago pago) {
-		
+	protected Doctor doctor;
+	
+	public Cita() {
+		this.pagada=false;
 	}
+
+	@Override
+	public boolean realizarPago(float monto) {
+		this.pagada=true;
+		return true;
+	}
+	
+	public void atendidaPor(Doctor d) {
+		this.doctor=d;
+	}
+	
 }

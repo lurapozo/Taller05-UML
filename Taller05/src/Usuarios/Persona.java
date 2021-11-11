@@ -13,6 +13,7 @@ public class Persona {
 	public boolean logIn() {
 		return true;
 	}
+	
 	public boolean logOut() {
 		return true;
 	}
